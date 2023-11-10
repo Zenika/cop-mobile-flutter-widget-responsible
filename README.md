@@ -1,16 +1,15 @@
 # cop_mobile_flutter_widget_responsible
 
-A new Flutter project.
+Un projet pour un mob programming sur le thème des widgets responsives en Flutter.
 
-## Getting Started
+L'écran de l'application est composé de deux parties :
+- une partie supérieur qui contient un carousel d'images
+- une partie inférieur qui contient des boutons
 
-This project is a starting point for a Flutter application.
+Le but est de rendre l'application responsive en fonction de la taille de l'écran.
+Regle :
+l'écran doit gérer les textes qui sont agrandis pour l'accessibilité.
+Le caroussel a un background qui est fixe.
+le texte doit rester en dessous du background du caroussel.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![](/Users/patou/projets/cop-mobile-flutter-widget-responsible/capture/exemple.png)

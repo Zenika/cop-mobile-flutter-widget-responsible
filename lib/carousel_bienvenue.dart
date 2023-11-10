@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
+import 'item.dart';
+
 class CarouselBienvenue extends StatefulWidget {
   final children = [
     const Item(Icons.access_alarm, "Lorem ipsum et dolor sit amet"),
@@ -14,44 +16,6 @@ class CarouselBienvenue extends StatefulWidget {
 
   @override
   State<CarouselBienvenue> createState() => _CarouselBienvenueState();
-}
-
-class Item extends StatelessWidget {
-  final IconData icon;
-
-  final String title;
-
-  const Item(
-    this.icon,
-    this.title, {
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final height = MediaQuery.of(context).size.height;
-    final backgroundHeight = height * 0.4;
-    return Column(
-      children: [
-        SizedBox(
-          height: backgroundHeight,
-          child: Center(
-              child: Icon(
-            icon,
-            size: 100,
-          )),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Text(
-            title,
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-        )
-      ],
-    );
-  }
 }
 
 class _CarouselBienvenueState extends State<CarouselBienvenue> {
@@ -78,7 +42,20 @@ class _CarouselBienvenueState extends State<CarouselBienvenue> {
         Positioned(
           top: 0,
           child: Container(
-            color: Colors.black38,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment(-0.4, -0.8),
+                stops: [0.0, 0.5, 0.5, 1],
+                colors: [
+                  Colors.black38,
+                  Colors.black38,
+                  Colors.black12,
+                  Colors.black12,
+                ],
+                tileMode: TileMode.repeated,
+              ),
+            ),
             width: MediaQuery.of(context).size.width,
             height: backgroundHeight,
           ),
