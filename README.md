@@ -12,4 +12,5 @@ l'écran doit gérer les textes qui sont agrandis pour l'accessibilité.
 Le caroussel a un background qui est fixe.
 le texte doit rester en dessous du background du caroussel.
 
-![](/Users/patou/projets/cop-mobile-flutter-widget-responsible/capture/exemple.png)
+![](capture/exemple.png)
+
