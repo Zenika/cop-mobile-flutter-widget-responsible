@@ -12,28 +12,32 @@ class MainPage extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          CarouselBienvenue(),
-          SizedBox(
-            width: MediaQuery.of(context).size.width - 32,
-            child: FilledButton(
-              onPressed: () {},
-              child: Text("Connexion", textAlign: TextAlign.center),
+          Expanded(child: CarouselBienvenue()),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              children: [
+                FilledButton(
+                    onPressed: () {},
+                    child: Text("Connexion", textAlign: TextAlign.center),
+                    style: FilledButton.styleFrom(
+                        minimumSize: Size.fromHeight(48))),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: FilledButton(
+                      onPressed: () {},
+                      child: Text("Aide", textAlign: TextAlign.center),
+                      style: FilledButton.styleFrom(
+                          minimumSize: Size.fromHeight(48))),
+                ),
+                FilledButton(
+                    onPressed: () {},
+                    child: Text("Crer un compte", textAlign: TextAlign.center),
+                    style: FilledButton.styleFrom(
+                        minimumSize: Size.fromHeight(48))),
+              ],
             ),
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width - 32,
-            child: FilledButton(
-              onPressed: () {},
-              child: Text("Aide", textAlign: TextAlign.center),
-            ),
-          ),
-          SizedBox(
-            width: MediaQuery.of(context).size.width - 32,
-            child: FilledButton(
-              onPressed: () {},
-              child: Text("Créer un compte", textAlign: TextAlign.center),
-            ),
-          ),
+          )
         ],
       ),
     );
